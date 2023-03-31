@@ -1,0 +1,29 @@
+
+
+.navcontainer {
+    padding: 5px 30px;
+    
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.nav .listitem {
+    list-style: none;
+}
+
+.nav .listitem .linkitem {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav .listitem .linkitem:hover {
+    background-color: rgba(45, 79, 109, 0.199);
+}
+
+
+
