@@ -15,12 +15,16 @@ export async function PostsList(){
   const posts = await fetchPosts()
 
   return posts.slice(0, 10).map(post => (
-    <article key={post.id}>
-      <Link href={`/post/${post.id}`}>
-        <h2>{post.title}</h2>
-        <p>{post.body}</p>
-      </Link>
-      <LikeButton id={post.id}></LikeButton>
+    <article key={post.id} className='col'>
+      <div className='card h-100 shadow-sm border border-0 p-2'>
+        <div className='card-body'>
+          <Link href={`/post/${post.id}`} className='text-decoration-none text-body'>
+            <h2 className='card-title'>{post.title}</h2>
+            <p>{post.body}</p>
+          </Link>
+        </div>
+        <LikeButton id={post.id}></LikeButton>
+      </div>
     </article>
   ))
 }

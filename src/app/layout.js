@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import Nav from "../components/Nav"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const metadata = {
   title: 'Primera pagina con Next 13',
@@ -12,11 +13,11 @@ export const metadata = {
  
 export default function RootLayout ({ children }) {
  return (
-    <html lang="en">
+    <html lang="es" data-bs-theme="dark">
       <head>
         <title>Mi Primera pagina con nextjs 13</title>
       </head>
-      <body>
+      <body className='bg-dark-subtle'>
         <Nav/>
         <section className='container'>
          {children}
